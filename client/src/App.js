@@ -4,7 +4,7 @@ import { CssBaseline } from "material-ui";
 import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
 
 import NavBar from "./components/menus/NavBar";
-import Home from "./components/Home";
+import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 
 const theme = createMuiTheme({
@@ -34,8 +34,8 @@ class App extends Component {
             <CssBaseline />
             <NavBar />
             <Switch>
-              <Route exact path="/" component={ Home }/>
-              <Route exact path="/projects" component={ Projects }/>
+              <Route exact path="/" component={AboutMe}/>
+              <Route exact path="/projects" component={Projects}/>
             </Switch>
           </Fragment>
         </Router>
