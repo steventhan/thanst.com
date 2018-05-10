@@ -8,8 +8,17 @@ import ProjectTags from "./ProjectTags";
 const styles = {
   root: {},
   project: {
-    width: "20%",
-    padding: "0.5%"
+    width: "100%",
+    padding: "0.5%",
+    "@media (min-width: 550px)": {
+      width: "50%",
+    },
+    "@media (min-width: 900px)": {
+      width: "33.33%",
+    },
+    "@media (min-width: 1200px)": {
+      width: "25%",
+    },
   },
 };
 
@@ -29,7 +38,7 @@ const ProjectList = ({ projects, classes }) => {
               title={project.title}
               subheader="September 14, 2016"
             />
-            <img width="100%" alt="" src="http://via.placeholder.com/350x150" />
+            <img width="100%" alt="" src="http://via.placeholder.com/350x250" />
             <CardContent>
               <Typography component="p">
                 {project.intro}
