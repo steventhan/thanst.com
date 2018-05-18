@@ -7,14 +7,22 @@ const styles = {
     flexWrap: "wrap"
   },
   tag: {
-    margin: 2 
+    margin: 2
   }
 }
 
-const ProjectTags = ({ tags, classes }) => {
+const ProjectTags = ({ tags, classes, onClick }) => {
   return (
     <div className={classes.root}>
-      {tags.map(tag => <Chip className={classes.tag} key={tag} label={tag} />)}
+      {tags.map(tag => (
+        <Chip
+          className={classes.tag}
+          key={tag}
+          label={tag}
+          onClick={event => onClick(event, tag)}
+        />
+      )
+      )}
     </div>
   );
 }

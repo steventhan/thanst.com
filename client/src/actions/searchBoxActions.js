@@ -1,4 +1,13 @@
-export const updateSearchText = (text) => ({
-  type: "UPDATE",
-  text
-});
+export const replaceSearchWords = text => {
+  return {
+    type: "REPLACE",
+    text
+  };
+}
+
+export const appendSearchWord = text => {
+  return {
+    type: "APPEND",
+    text
+  };
+}

@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
 import searchBoxReducer from "./searchBoxReducer";
+import splitPaneReducer from "./splitPaneReducer";
 
 export default combineReducers({
-  searchBox: searchBoxReducer
+  searchText: searchBoxReducer,
+  splitPane: splitPaneReducer
 });
