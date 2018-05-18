@@ -1,14 +1,30 @@
 import React, { Component } from "react";
-import { Avatar, withStyles, Grid, Typography, TextField } from "material-ui";
+import { Avatar, withStyles, Chip, Grid, InputAdornment, IconButton, Typography, TextField,
+  Select, MenuItem } from "material-ui";
+import { Clear } from "@material-ui/icons"
 
-const SearchBox = ({ text, onChange }) => (
+const keywords = ["pytorch", "machine learning"]
+
+const styles = {
+}
+
+const SearchBox = ({ text, classes, onChange, onClearButtonClick }) => (
   <TextField
     label="Search"
-    placeholder="For example: 'machine learning', 'react', 'mongodb' etc."
+    helperText="Keywords can be comma-separated. For example: machine learning, react, mongodb"
     value={text}
     onChange={onChange}
     fullWidth
+    InputProps={{
+      endAdornment:  (text !== "" &&
+        <InputAdornment position="end">
+          <IconButton onClick={onClearButtonClick}>
+            <Clear />
+          </IconButton>
+        </InputAdornment>
+      )
+    }}
   />
 )
 
-export default SearchBox;
+export default withStyles(styles)(SearchBox);
