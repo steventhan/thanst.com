@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { AppBar, Button, Toolbar } from "material-ui";
+import { AppBar, Button, Toolbar } from "@material-ui/core";
 import { withStyles } from "material-ui/styles";
 
 const buttons = [
@@ -11,10 +11,6 @@ const buttons = [
   {
     label: "projects",
     path: "/projects"
-  },
-  {
-    label: "resume",
-    path: "/resume"
   },
 ]
 
@@ -36,6 +32,7 @@ class NavBar extends Component {
         <Toolbar style={styles.toolbar}>
           {buttons.map((button, i) => (
               <Button
+                key={i}
                 component={NavLink}
                 to={button.path}
                 size="small"
