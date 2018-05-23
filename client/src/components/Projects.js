@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import { Avatar, withStyles, Grid, Typography, TextField } from "material-ui";
+import { Avatar, withStyles, Grid, Typography, TextField } from "@material-ui/core";
 
 import SearchBoxContainer from "../containers/SearchBoxContainer";
 import ProjectListContainer from "../containers/ProjectListContainer";
@@ -12,13 +12,15 @@ const styles = {
   root: {
     display: "flex",
     flexDirection: "column",
-    width: "100%",
-    height: "100%",
     paddingTop: 60,
   },
   section: {
-    paddingLeft: 20,
-    paddingRight: 20,
+    paddingLeft: 10,
+    paddingRight: 10,
+    "@media (min-width: 480px)": {
+      paddingLeft: 20,
+      paddingRight: 20,
+    },
   }
 }
 
@@ -33,8 +35,8 @@ class Projects extends Component {
             <Typography align="center" variant="title">Projects</Typography>
           </Grid>
         </Grid>
-        <Grid className={classes.section} container spacing={0} justify="flex-end">
-          <Grid item xs={12} md={4} lg={2}>
+        <Grid className={classes.section} container spacing={0} justify="center">
+          <Grid item xs={12} sm={8} md={6}>
             <SearchBoxContainer />
           </Grid>
         </Grid>
