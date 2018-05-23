@@ -1,58 +1,72 @@
 import React, { Component } from "react";
-import { Chip, Paper, Typography, withStyles } from "material-ui";
+import { findDOMNode } from "react-dom";
+import { connect } from "react-redux";
+import { Chip, Paper, Typography, withStyles } from "@material-ui/core";
 import Card, { CardHeader, CardMedia, CardContent, CardActions } from "material-ui/Card";
 import Masonry from "react-masonry-component";
+import $ from "jquery";
 
-import ProjectTags from "./ProjectTags";
+import ProjectTagsContainer from "../containers/ProjectTagsContainer";
 
 const styles = {
   root: {},
   project: {
-    width: "100%",
     padding: "0.5%",
-    "@media (min-width: 550px)": {
-      width: "50%",
-    },
-    "@media (min-width: 900px)": {
-      width: "33.33%",
-    },
-    "@media (min-width: 1200px)": {
-      width: "25%",
-    },
   },
 };
 
-const ProjectList = ({ projects, classes }) => {
-  const options = {
-    percentPosition: true,
-    itemSelector: `.${classes.project}`,
-    columnWidth: `.${classes.project}`,
+const mapStateToProps = store => ({ splitPane: store.splitPane })
+
+class ProjectList extends Component {
+  getProjectWidth() {
+    const { splitPane } = this.props;
+    const containerWidth = splitPane.open ? splitPane.size : $(window).width();
+    let projectWidth;
+
+    if (containerWidth > 1200) {
+      projectWidth = "25%";
+    } else if (containerWidth > 900) {
+      projectWidth = "33.33%";
+    } else if (containerWidth > 550) {
+      projectWidth = "50%";
+    } else projectWidth = "100%";
+
+    return projectWidth;
   }
 
-  return (
-    <Masonry className={classes.root} options={options} >
-      {projects.map(project => (
-        <div className={classes.project} key={project.id}>
-          <Card>
-            <CardHeader
-              title={project.title}
-              subheader="September 14, 2016"
-            />
-            <img width="100%" alt="" src="http://via.placeholder.com/350x250" />
-            <CardContent>
-              <Typography component="p">
-                {project.intro}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <ProjectTags tags={project.tags} />
-            </CardActions>
-          </Card>
-        </div>
-      )
-      )}
-    </Masonry>
-  )
+  render() {
+    const { projects, classes } = this.props;
+    const options = {
+      percentPosition: true,
+      itemSelector: `.${classes.project}`,
+    }
+    console.log(options.itemSelector);
+
+    return (
+      <Masonry options={options} >
+        {projects.map(project => (
+          <div style={{ width: this.getProjectWidth() }} className={classes.project} key={project.id}>
+            <Card onClick={() => alert("hi")}>
+              <CardHeader
+                title={project.title}
+                subheader="September 14, 2016"
+              />
+              <img width="100%" alt="" src="http://via.placeholder.com/350x250" />
+              <CardContent>
+                <Typography component="p">
+                  {project.intro}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <ProjectTagsContainer tags={project.tags} />
+              </CardActions>
+            </Card>
+          </div>
+        )
+        )}
+      </Masonry>
+    );
+  }
 }
 
-export default withStyles(styles)(ProjectList);
+export default connect(mapStateToProps)(withStyles(styles)(ProjectList));
