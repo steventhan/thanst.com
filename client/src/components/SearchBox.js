@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Avatar, withStyles, Chip, Grid, InputAdornment, IconButton, Typography, TextField,
-  Select, MenuItem } from "material-ui";
+  Select, MenuItem } from "@material-ui/core";
 import { Clear } from "@material-ui/icons"
 
 const keywords = ["pytorch", "machine learning"]

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Chip, withStyles } from "material-ui";
+import { Chip, withStyles } from "@material-ui/core";
 
 const styles = {
   root: {

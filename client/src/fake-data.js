@@ -27,7 +27,7 @@ export default [
     id: 5,
     title: "Smart Marino",
     intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
-    tags: ["virtual queue", "qr", "NodeJS", "ReactJS", "Material-UI"]
+    tags: ["virtual queue", "qr", "NodeJS", "ReactJS", "@material-ui/core"]
   },
   {
     id: 6,
