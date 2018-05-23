@@ -4,3 +4,9 @@ export const resizePane = width => {
     width
   };
 }
+
+export const togglePane = () => {
+  return {
+    type: "TOGGLE"
+  };
+}
