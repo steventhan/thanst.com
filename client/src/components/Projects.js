@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import { Avatar, withStyles, Grid, Typography, TextField } from "@material-ui/core";
+import { Scrollbars } from "react-custom-scrollbars";
 
 import SearchBoxContainer from "../containers/SearchBoxContainer";
 import ProjectListContainer from "../containers/ProjectListContainer";
@@ -13,15 +14,9 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     paddingTop: 60,
-  },
-  section: {
     paddingLeft: 10,
     paddingRight: 10,
-    "@media (min-width: 480px)": {
-      paddingLeft: 20,
-      paddingRight: 20,
-    },
-  }
+  },
 }
 
 
@@ -29,23 +24,13 @@ class Projects extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root}>
-        <Grid className={classes.section} container spacing={0} justify="center" >
-          <Grid item xs={12} >
-            <Typography align="center" variant="title">Projects</Typography>
-          </Grid>
-        </Grid>
-        <Grid className={classes.section} container spacing={0} justify="center">
-          <Grid item xs={12} sm={8} md={6}>
-            <SearchBoxContainer />
-          </Grid>
-        </Grid>
-        <Grid className={classes.section} container spacing={0} >
-          <Grid item xs={12} >
-            <ProjectListContainer />
-          </Grid>
-        </Grid>
-      </div>
+      <Scrollbars style={{minHeight: "100vh"}}>
+        <div className={classes.root}>
+          <Typography align="center" variant="title">Projects</Typography>
+          <SearchBoxContainer />
+          <ProjectListContainer />
+        </div>
+      </Scrollbars>
     );
   }
 }
