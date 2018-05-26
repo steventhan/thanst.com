@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import { findDOMNode } from "react-dom";
 import { connect } from "react-redux";
 import { Chip, Paper, Typography, withStyles } from "@material-ui/core";
-import Card, { CardHeader, CardMedia, CardContent, CardActions } from "material-ui/Card";
+import { Card, CardHeader, CardMedia, CardContent, CardActions } from "@material-ui/core";
 import Masonry from "react-masonry-component";
+import { Scrollbars } from "react-custom-scrollbars";
 import $ from "jquery";
 
+import { resetTransition } from "../actions/splitPaneActions";
 import ProjectTagsContainer from "../containers/ProjectTagsContainer";
 
 const styles = {
@@ -15,37 +17,34 @@ const styles = {
   },
 };
 
-const mapStateToProps = store => ({ splitPane: store.splitPane })
 
 class ProjectList extends Component {
-  getProjectWidth() {
-    const { splitPane } = this.props;
-    const containerWidth = splitPane.open ? splitPane.size : $(window).width();
-    let projectWidth;
+  shouldComponentUpdate = nextProps => {
+    console.log("here");
+    const { projectListState } = nextProps;
+    if (!projectListState.waiting) {
+      return true;
+    }
+    return false;
+  }
 
-    if (containerWidth > 1200) {
-      projectWidth = "25%";
-    } else if (containerWidth > 900) {
-      projectWidth = "33.33%";
-    } else if (containerWidth > 550) {
-      projectWidth = "50%";
-    } else projectWidth = "100%";
-
-    return projectWidth;
+  componentWIllUpdate = () => {
+    this.props.onFinishUpdate();
   }
 
   render() {
     const { projects, classes } = this.props;
     const options = {
-      percentPosition: true,
       itemSelector: `.${classes.project}`,
+      transitionDuration: "0.2s",
+      percentPosition: true,
+
     }
-    console.log(options.itemSelector);
 
     return (
       <Masonry options={options} >
         {projects.map(project => (
-          <div style={{ width: this.getProjectWidth() }} className={classes.project} key={project.id}>
+          <div style={{ width: this.props.projectWidth }} className={classes.project} key={project.id}>
             <Card onClick={() => alert("hi")}>
               <CardHeader
                 title={project.title}
@@ -62,11 +61,10 @@ class ProjectList extends Component {
               </CardActions>
             </Card>
           </div>
-        )
-        )}
+        ))}
       </Masonry>
     );
   }
 }
 
-export default connect(mapStateToProps)(withStyles(styles)(ProjectList));
+export default withStyles(styles)(ProjectList);
