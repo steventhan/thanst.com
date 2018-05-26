@@ -13,15 +13,13 @@ const styles = {
     height: "100vh",
     justifyContent: "center",
     alignItems: "center",
-    paddingBottom: "10%",
+    paddingBottom: 70,
   },
   wrapper: {
-    width: "50%",
-    height: "50vw",
     maxWidth: 250,
     maxHeight: 250,
     border: `5px solid ${secondary}`,
-    borderRadius: "50%"
+    borderRadius: "50%",
   },
   avatar: {
     // width: "50%",
