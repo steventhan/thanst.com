@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { togglePane } from "../../actions/splitPaneActions"
+import { togglePane, hackFixMasonry } from "../../actions/splitPaneActions";
+import { startWaiting } from "../../actions/projectListActions";
 import { withStyles, Button } from "@material-ui/core";
 
 import resumeIcon from "../../resume-icon.png";
-
 
 const styles = {
   root: {
@@ -16,12 +16,17 @@ const styles = {
 }
 
 class ResumeFloatingButton extends Component {
+  handleClick = event => {
+    this.props.dispatch(togglePane());
+    this.props.dispatch(startWaiting());
+  }
+
   render() {
     const classes = this.props.classes;
     return (
       <Button
         className={classes.root}
-        onClick={() => this.props.dispatch(togglePane())}
+        onClick={this.handleClick}
         variant="fab" color="secondary"
         title="resume"
       >
