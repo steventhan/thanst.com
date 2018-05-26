@@ -3,10 +3,10 @@ export const resizePane = width => {
     type: "RESIZE",
     width
   };
-}
+};
 
 export const togglePane = () => {
   return {
     type: "TOGGLE"
   };
-}
+};
