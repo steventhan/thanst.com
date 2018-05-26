@@ -35,4 +35,76 @@ export default [
     intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
     tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
   },
+  {
+    id: 7,
+    title: "Dota 2 Bot",
+    intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
+    tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
+  },
+  {
+    id: 8,
+    title: "Dota 2 Bot",
+    intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
+    tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
+  },
+  {
+    id: 9,
+    title: "Dota 2 Bot",
+    intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
+    tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
+  },
+  {
+    id: 10,
+    title: "Dota 2 Bot",
+    intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
+    tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
+  },
+  {
+    id: 11,
+    title: "Dota 2 Bot",
+    intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
+    tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
+  },
+  {
+    id: 12,
+    title: "Dota 2 Bot",
+    intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
+    tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
+  },
+  {
+    id: 13,
+    title: "Dota 2 Bot",
+    intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
+    tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
+  },
+  {
+    id: 14,
+    title: "Dota 2 Bot",
+    intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
+    tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
+  },
+  {
+    id: 15,
+    title: "Dota 2 Bot",
+    intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
+    tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
+  },
+  {
+    id: 16,
+    title: "Dota 2 Bot",
+    intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
+    tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
+  },
+  {
+    id: 17,
+    title: "Dota 2 Bot",
+    intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
+    tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
+  },
+  {
+    id: 18,
+    title: "Dota 2 Bot",
+    intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed dui non sapien vulputate dapibus id et velit. Nullam lacinia sapien sit amet nunc facilisis",
+    tags: ["machine learning", "network", "deep q", "neural", "Japronto", "PyTorch", ]
+  },
 ];
