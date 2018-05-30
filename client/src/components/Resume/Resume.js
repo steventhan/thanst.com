@@ -1,12 +1,7 @@
-import React, { Component, Fragment } from "react";
-import { withStyles, Button, Typography, MenuItem, Select } from "@material-ui/core";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
-import faLightbulb from "@fortawesome/fontawesome-free-regular/faLightbulb";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import React, { Component } from "react";
+import { withStyles } from "@material-ui/core";
 
-import Keyword from "./Keyword";
 import { Section, Instruction, Download, Intro, Skills, Education, Experience } from "./Sections";
-import { primary, secondary } from "../../theme";
 
 const styles = {
   root: {

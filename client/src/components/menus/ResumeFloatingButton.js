@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { togglePane, hackFixMasonry } from "../../actions/splitPaneActions";
+import { togglePane } from "../../actions/splitPaneActions";
 import { startWaiting } from "../../actions/projectListActions";
 import { withStyles, Button } from "@material-ui/core";
 

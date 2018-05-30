@@ -1,22 +1,11 @@
 import React, { Component, Fragment } from "react";
-import { withStyles, Button, Typography, MenuItem, Select } from "@material-ui/core";
+import { Button, MenuItem, Select } from "@material-ui/core";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import faLightbulb from "@fortawesome/fontawesome-free-regular/faLightbulb";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
 import Keyword from "./Keyword";
 import { primary, secondary } from "../../theme";
-
-const styles = {
-  root: {
-    paddingTop: 45,
-    paddingBottom: 20,
-    backgroundColor: "#fafafa",
-    minHeight: "100%",
-    color: "#000",
-    transition: "width 0.3s linear"
-  },
-}
 
 const resume = {
   intro: "Hi, my name is Steven Than. I'm a grad student at Northeastern University working toward my Master's degree in Computer Science with "
@@ -191,7 +180,6 @@ export const Skills = props => {
           <div key={skill} style={{ paddingBottom: lineSpacing }}>
             <strong style={{ textTransform: "uppercase" }}>{skill}: </strong>
             {resume.skills[skill].map((word, idx) => {
-              const delimiter = ""
               if (typeof word === "object") {
                 return <Keyword key={idx} displayText={word.displayText} searchText={word.searchText} />;
               }

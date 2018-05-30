@@ -1,8 +1,5 @@
 import React from "react";
-import { withStyles, Button, Icon } from "@material-ui/core";
-import FontAwesomeIcon from "@fortawesome/react-fontawesome";
-import { faLinkedinIn } from "@fortawesome/fontawesome-free-brands";
-import { AlarmOff } from '@material-ui/icons';
+import { withStyles, Button } from "@material-ui/core";
 import { EmailOutline, LinkedinBox, GithubCircle } from "mdi-material-ui";
 
 

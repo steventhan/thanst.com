@@ -1,12 +1,9 @@
-import React, { Component, Fragment } from "react";
-import { connect } from "react-redux";
-import { Avatar, withStyles, Grid, Typography, TextField } from "@material-ui/core";
+import React, { Component } from "react";
+import { withStyles, Typography } from "@material-ui/core";
 import { Scrollbars } from "react-custom-scrollbars";
 
 import SearchBox from "./SearchBox";
 import ProjectList from "./ProjectList";
-import projects from "../../fake-data";
-import avatar from "../../avatar.jpg";
 
 
 const styles = {

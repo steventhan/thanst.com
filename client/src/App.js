@@ -1,18 +1,14 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { findDOMNode } from "react-dom"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
-import { CSSTransition } from "react-transition-group";
 import { CssBaseline } from "@material-ui/core";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { MuiThemeProvider } from "@material-ui/core/styles";
 import SplitPane from "react-split-pane";
 import { Scrollbars } from "react-custom-scrollbars";
 import injectSheet from "react-jss"
 
-
-import $ from "jquery";
-
-import theme, { primary, secondary } from "./theme";
+import theme, { secondary } from "./theme";
 import { resizePane } from "./actions/splitPaneActions";
 import { startWaiting, sendUpdateSignal, finishUpdate } from "./actions/projectListActions";
 import { NavBar, ResumeFloatingButton } from "./components/Menus";
@@ -77,7 +73,6 @@ class App extends Component {
               ref={this.splitPane}
               split="vertical"
               onChange={this.handlePaneResize}
-              onDragStarted={this.handleDragStarted}
               onDragStarted={this.handleDragStarted}
               onDragFinished={this.handleDragFinished}
               minSize={300}

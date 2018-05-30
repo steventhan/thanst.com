@@ -1,9 +1,6 @@
-import React, { Component } from "react";
-import { Avatar, withStyles, Chip, Grid, InputAdornment, IconButton, Typography, TextField,
-  Select, MenuItem } from "@material-ui/core";
+import React from "react";
+import { withStyles,  InputAdornment, IconButton, TextField } from "@material-ui/core";
 import { Clear } from "@material-ui/icons"
-
-const keywords = ["pytorch", "machine learning"]
 
 const styles = {
   root: {

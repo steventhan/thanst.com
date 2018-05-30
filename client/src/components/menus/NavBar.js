@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { AppBar, Button, Toolbar } from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
 
 const buttons = [
   {
@@ -26,7 +25,6 @@ const styles = {
 
 class NavBar extends Component {
   render() {
-    const classes = this.props;
     return (
       <AppBar style={styles.appbar}>
         <Toolbar style={styles.toolbar}>
@@ -49,4 +47,4 @@ class NavBar extends Component {
   }
 }
 
-export default withStyles(styles)(NavBar);
+export default NavBar;

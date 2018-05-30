@@ -1,14 +1,9 @@
 import React, { Component, Fragment } from "react";
-import { findDOMNode } from "react-dom";
-import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
-import { Chip, Paper, Typography, withStyles } from "@material-ui/core";
-import { Card, CardHeader, CardMedia, CardContent, CardActions } from "@material-ui/core";
+import { Typography, withStyles } from "@material-ui/core";
+import { Card, CardHeader, CardContent, CardActions } from "@material-ui/core";
 import Masonry from "react-masonry-component";
-import { Scrollbars } from "react-custom-scrollbars";
-import $ from "jquery";
 
-import { resetTransition } from "../../../actions/splitPaneActions";
 import ProjectTags from "../ProjectTags";
 
 const styles = {
@@ -22,10 +17,6 @@ const styles = {
 class ProjectList extends Component {
   shouldComponentUpdate = nextProps => {
     return !nextProps.projectListState.waiting;
-  }
-
-  componentWIllUpdate = () => {
-    this.props.onFinishUpdate();
   }
 
   render() {

@@ -1,10 +1,8 @@
-import React from "react";
 import { connect } from "react-redux";
 import $ from "jquery";
 
 import ProjectList from "./ProjectList";
 import projects from "../../../fake-data";
-import { finishUpdate } from "../../../actions/projectListActions";
 
 const toRegexList = searchText => {
   return searchText.toLowerCase().split(",").reduce((wordList, word) => {
@@ -50,10 +48,6 @@ const mapStateToProps = store => ({
   projects: filterProjects(projects, store.searchText),
   projectListState: store.projectListState,
   projectWidth: getProjectWidth(store.splitPane)
-});
-
-const mapDispatchToProps = dispatch => ({
-  onFinishUpdate: () => dispatch(finishUpdate())
 });
 
 export default connect(mapStateToProps)(ProjectList);

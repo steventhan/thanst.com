@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Chip, withStyles } from "@material-ui/core";
 
 const styles = {
