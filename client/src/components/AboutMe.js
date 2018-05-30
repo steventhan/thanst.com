@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Avatar, withStyles } from "@material-ui/core";
+import { Avatar, CircularProgress, withStyles } from "@material-ui/core";
 
 import { secondary } from "../theme";
 import ContactOptions from "./ContactOptions";
@@ -15,28 +15,52 @@ const styles = {
     alignItems: "center",
     paddingBottom: 70,
   },
+  progress: {
+    color: secondary
+  },
   wrapper: {
-    maxWidth: 250,
-    maxHeight: 250,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: 250,
+    height: 250,
     border: `5px solid ${secondary}`,
     borderRadius: "50%",
   },
   avatar: {
-    // width: "50%",
     width: "100%",
     height: "auto",
   }
 }
 
-const AboutMe = ({ classes }) =>  {
-  return (
-    <div className={classes.root}>
-      <div className={classes.wrapper}>
-        <Avatar className={classes.avatar} alt="avatar" src={avatar}/>
+class AboutMe extends Component {
+  state = {
+    loading: true
+  }
+
+  render() {
+    const { classes } = this.props;
+    return (
+      <div className={classes.root}>
+        <div className={classes.wrapper}>
+          <CircularProgress
+            style={!this.state.loading ? { display: "none" } : {}}
+            className={classes.progress}
+          />
+          <Avatar
+            style={this.state.loading ? { display: "none" } : {}}
+            className={classes.avatar}
+            alt="avatar"
+            src={avatar}
+            imgProps={{
+              onLoad: () => this.setState({ loading: false })
+            }}
+          />
+        </div>
+        <ContactOptions />
       </div>
-      <ContactOptions />
-    </div>
-  );
+    );
+  }
 }
 
 export default withStyles(styles)(AboutMe);
