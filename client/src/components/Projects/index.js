@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import { Avatar, withStyles, Grid, Typography, TextField } from "@material-ui/core";
 import { Scrollbars } from "react-custom-scrollbars";
 
-import SearchBoxContainer from "../containers/SearchBoxContainer";
-import ProjectListContainer from "../containers/ProjectListContainer";
-import projects from "../fake-data";
-import avatar from "../avatar.jpg";
+import SearchBox from "./SearchBox";
+import ProjectList from "./ProjectList";
+import projects from "../../fake-data";
+import avatar from "../../avatar.jpg";
 
 
 const styles = {
@@ -27,8 +27,8 @@ class Projects extends Component {
       <Scrollbars style={{minHeight: "100vh"}}>
         <div className={classes.root}>
           <Typography align="center" variant="title">Projects</Typography>
-          <SearchBoxContainer />
-          <ProjectListContainer />
+          <SearchBox />
+          <ProjectList />
         </div>
       </Scrollbars>
     );

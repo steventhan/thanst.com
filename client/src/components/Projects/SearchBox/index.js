@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { replaceSearchWords } from "../actions/searchBoxActions";
-import SearchBox from "../components/SearchBox";
+import { replaceSearchWords } from "../../../actions/searchBoxActions";
+import SearchBox from "./SearchBox";
 
 const mapStateToProps = store => ({
   text: store.searchText

@@ -21,7 +21,7 @@ const SearchBox = ({ text, classes, onChange, onClearButtonClick }) => (
     <TextField
       className={classes.textBox}
       label="Search"
-      helperText="Keywords can be comma-separated. For example: machine learning, react, mongodb"
+      helperText={"Search phrases can be comma-separated, and are regex enabled. For example: machine learning, \\bReactJS\\b, mongo"}
       value={text}
       onChange={onChange}
       fullWidth

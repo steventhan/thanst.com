@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { appendSearchWord } from "../actions/searchBoxActions";
-import ProjectTags from "../components/ProjectTags";
+import { appendSearchWord } from "../../../actions/searchBoxActions";
+import ProjectTags from "./ProjectTags";
 
 const mapStateToProps = (store, ownProps) => ({
   tags: ownProps.tags
@@ -11,7 +11,7 @@ const mapStateToProps = (store, ownProps) => ({
 const mapDispatchToProps = dispatch => ({
   onClick: (event, tag) => {
     event.stopPropagation();
-    dispatch(appendSearchWord(tag));
+    dispatch(appendSearchWord(`^${tag}$`));
     return;
   }
 })

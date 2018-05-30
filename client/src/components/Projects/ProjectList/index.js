@@ -2,26 +2,30 @@ import React from "react";
 import { connect } from "react-redux";
 import $ from "jquery";
 
-import ProjectList from "../components/ProjectList";
-import projects from "../fake-data";
-import { finishUpdate } from "../actions/projectListActions";
+import ProjectList from "./ProjectList";
+import projects from "../../../fake-data";
+import { finishUpdate } from "../../../actions/projectListActions";
+
+const toRegexList = searchText => {
+  return searchText.toLowerCase().split(",").reduce((wordList, word) => {
+    let trimmed = word.trim();
+    if (trimmed.length > 0) {
+      try {
+        wordList.push(RegExp(trimmed));
+      } catch(err) {}
+    }
+    return wordList;
+  }, []);
+}
 
 const filterProjects =  (projects, searchText) => {
   if (searchText.length === 0) return projects;
 
-  const searchWords = searchText.toLowerCase().split(",").reduce((wordList, word) => {
-    let trimmed = word.trim();
-    if (trimmed.length > 0) {
-      wordList.push(trimmed);
-    }
-    return wordList;
-  }, []);
-
   return projects.filter(project => {
-    return searchWords.some(word => {
-      return project.title.toLowerCase().includes(word)
-              || project.intro.toLowerCase().includes(word)
-              || project.tags.some(tag => tag.toLowerCase().includes(word));
+    return toRegexList(searchText).some(regex => {
+      return regex.test(project.title.toLowerCase())
+              || regex.test(project.intro.toLowerCase())
+              || project.tags.some(tag => regex.test(tag.toLowerCase()));
     });
   })
 };
