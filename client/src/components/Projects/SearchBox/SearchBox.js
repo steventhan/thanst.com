@@ -6,6 +6,7 @@ const styles = {
   root: {
     display: "flex",
     justifyContent: "center",
+    paddingBottom: 25
   },
   textBox: {
     width:"90%",
