@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
 import $ from "jquery";
 
+import { fetchProjects } from "../../../actions/projectListActions";
 import ProjectList from "./ProjectList";
-import projects from "../../../fake-data";
 
 const toRegexList = searchText => {
   return searchText.toLowerCase().split(",").reduce((wordList, word) => {
@@ -21,9 +21,9 @@ const filterProjects =  (projects, searchText) => {
 
   return projects.filter(project => {
     return toRegexList(searchText).some(regex => {
-      return regex.test(project.title.toLowerCase())
-              || regex.test(project.intro.toLowerCase())
-              || project.tags.some(tag => regex.test(tag.toLowerCase()));
+      return regex.test(project.metadata.title.toLowerCase())
+              || regex.test(project.metadata.intro.toLowerCase())
+              || project.metadata.tags.some(tag => regex.test(tag.toLowerCase()));
     });
   })
 };
@@ -45,9 +45,13 @@ const getProjectWidth = splitPaneState => {
 
 
 const mapStateToProps = store => ({
-  projects: filterProjects(projects, store.searchText),
+  projects: filterProjects(store.projectListState.projects, store.searchText),
   projectListState: store.projectListState,
   projectWidth: getProjectWidth(store.splitPane)
 });
 
-export default connect(mapStateToProps)(ProjectList);
+const mapDispatchToProps = dispatch => ({
+  fetchProjects: () => dispatch(fetchProjects())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectList);
