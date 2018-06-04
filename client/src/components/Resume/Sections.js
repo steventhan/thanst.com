@@ -48,6 +48,7 @@ const resume = {
       { displayText: "Pyramid", searchText: "^Pyramid$" },
       { displayText: "PyTorch", searchText: "^PyTorch$" },
       { displayText: "ReactJS", searchText: "^ReactJS$" },
+      { displayText: "Redux", searchText: "^Redux$" },
     ],
     testing: [
       { displayText: "JUnit", searchText: "^JUnit$" },
