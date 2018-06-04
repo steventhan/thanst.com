@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { withStyles, Typography } from "@material-ui/core";
+import { withStyles } from "@material-ui/core";
 import { Scrollbars } from "react-custom-scrollbars";
 
 import SearchBox from "./SearchBox";
 import ProjectList from "./ProjectList";
+import UnderlinedTitle from "../UnderlinedTitle";
 
 
 const styles = {
@@ -23,7 +24,7 @@ class Projects extends Component {
     return (
       <Scrollbars style={{minHeight: "100vh"}}>
         <div className={classes.root}>
-          <Typography align="center" variant="title">Projects</Typography>
+          <UnderlinedTitle text="Projects" />
           <SearchBox />
           <ProjectList />
         </div>
