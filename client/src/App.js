@@ -10,17 +10,16 @@ import injectSheet from "react-jss"
 
 import theme, { secondary } from "./theme";
 import { resizePane } from "./actions/splitPaneActions";
-import { startWaiting, sendUpdateSignal, finishUpdate } from "./actions/projectListActions";
+import { startWaiting, sendUpdateSignal } from "./actions/projectListActions";
 import { NavBar, ResumeFloatingButton } from "./components/Menus";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
+import ProjectDetail from "./components/ProjectDetail";
 import Resume from "./components/Resume";
 
 const styles = {
   resizer: {
-    "&:hover": {
-      cursor: "col-resize"
-    },
+    cursor: "col-resize",
     width: 7,
     backgroundColor: secondary,
   },
@@ -43,7 +42,7 @@ class App extends Component {
     const node = findDOMNode(this.splitPane.current.pane1);
     node.addEventListener("transitionend", event => {
       if (event.propertyName === "width") {
-        this.props.dispatch(finishUpdate());
+        this.props.dispatch(sendUpdateSignal());
       }
     });
   }
@@ -51,12 +50,12 @@ class App extends Component {
   handlePaneResize = width => this.props.dispatch(resizePane(width));
 
   handleDragStarted = () => {
-    this.setState({ pane1Style: undefined });
+    this.setState({ pane1Style: undefined, resizerStyle: { opacity: 0.8 } });
     this.props.dispatch(startWaiting());
   }
 
   handleDragFinished = () => {
-    this.setState({ pane1Style: { transition: "width 0.3s linear" } });
+    this.setState({ pane1Style: { transition: "width 0.3s linear" }, resizerStyle: undefined });
     this.props.dispatch(sendUpdateSignal());
   }
 
@@ -78,11 +77,13 @@ class App extends Component {
               minSize={300}
               size={splitPane.open ? splitPane.size : "100%"}
               pane1Style={this.state.pane1Style}
+              resizerStyle={this.state.resizerStyle}
               resizerClassName={classes.resizer}
             >
               <Switch>
                 <Route exact path="/" component={AboutMe}/>
                 <Route exact path="/projects" component={Projects}/>
+                <Route exact path="/projects/:slug" component={ProjectDetail}/>
               </Switch>
               <Scrollbars>
                 <Resume />
