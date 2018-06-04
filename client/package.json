@@ -10,6 +10,7 @@
     "@fortawesome/react-fontawesome": "0.0.20",
     "@material-ui/core": "^1.0.0",
     "@material-ui/icons": "^1.0.0-beta.43",
+    "axios": "^0.18.0",
     "jquery": "^3.3.1",
     "mdi-material-ui": "^5.0.0",
     "npm": "^6.0.0",
@@ -23,12 +24,14 @@
     "react-scripts": "1.1.4",
     "react-split-pane": "^0.1.77",
     "react-virtualized": "^9.19.0",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "redux-promise-middleware": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "proxy": "http://localhost:4000"
 }
