@@ -18,7 +18,7 @@ const buttons = [
 const styles = {
   appbar: {
     boxShadow: "none",
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
   },
   toolbar: {
     justifyContent: "space-between"
@@ -38,6 +38,7 @@ class NavBar extends Component {
                 size="small"
                 component={Link}
                 to="/projects"
+                variant="outlined"
               >
                 <KeyboardArrowLeft /> Back
               </Button>
