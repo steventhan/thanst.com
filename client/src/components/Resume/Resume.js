@@ -5,12 +5,13 @@ import { Section, Instruction, Download, Intro, Skills, Education, Experience } 
 
 const styles = {
   root: {
-    paddingTop: 45,
-    paddingBottom: 20,
+    paddingBottom: 30,
     backgroundColor: "#fafafa",
-    minHeight: "100%",
     color: "#000",
-    transition: "width 0.3s linear"
+    transition: "width 0.3s linear",
+    "@media (min-width: 900px)": {
+      paddingTop: 45,
+    }
   },
 }
 

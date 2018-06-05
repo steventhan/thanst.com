@@ -284,6 +284,7 @@ export class Download extends Component {
     return (
       <Fragment>
         <Button
+          onClick={event => event.stopPropagation()}
           variant="raised"
           color="primary"
           href={`https://s3-us-west-2.amazonaws.com/thanst.com/Steven-Than-resume.${this.state.format}`}
@@ -294,6 +295,7 @@ export class Download extends Component {
         </Button>
         &nbsp;&nbsp;
         <Select
+          onClick={event => event.stopPropagation()}
           style={{ color: primary }}
           value={this.state.format}
           onChange={event => this.setState({ format: event.target.value})}
