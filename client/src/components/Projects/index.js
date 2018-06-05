@@ -22,13 +22,11 @@ class Projects extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <Scrollbars style={{minHeight: "100vh"}}>
-        <div className={classes.root}>
-          <UnderlinedTitle text="Projects" />
-          <SearchBox />
-          <ProjectList />
-        </div>
-      </Scrollbars>
+      <div className={classes.root}>
+        <UnderlinedTitle text="Projects" />
+        <SearchBox />
+        <ProjectList />
+      </div>
     );
   }
 }
