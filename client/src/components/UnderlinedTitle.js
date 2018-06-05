@@ -27,10 +27,16 @@ const styles = {
   }
 }
 
-const UnderlinedTitle = ({ classes, text }) => {
+const UnderlinedTitle = ({ classes, text, className, ...rest }) => {
   return (
-    <div className={classes.root}>
-      <Typography align="center" className={classes.title} variant="title">{text}</Typography>
+    <div {...rest} className={`${classes.root} ${className}`}>
+      <Typography
+        align="center"
+        className={classes.title}
+        variant="title"
+      >
+        {text}
+      </Typography>
     </div>
   );
 };
