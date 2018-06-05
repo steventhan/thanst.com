@@ -13,7 +13,6 @@ const styles = {
     height: "100vh",
     justifyContent: "center",
     alignItems: "center",
-    paddingBottom: 70,
   },
   progress: {
     color: secondary
