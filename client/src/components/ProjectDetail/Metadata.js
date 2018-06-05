@@ -1,7 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
 import injectSheet from "react-jss"
-import { Link } from "react-router-dom";
 import { CalendarRange, GithubCircle, Presentation } from "mdi-material-ui";
 
 import { text } from "../../theme";
@@ -32,21 +30,17 @@ const Metadata = ({ metadata, classes }) => {
       {github && (
         github.map((link, idx) => (
           <span key={idx}>
-            <GithubCircle /> &nbsp; <a href={link} target="_blank">{link.replace(/^https?\:\/\//i, "")}</a>
+            <GithubCircle /> &nbsp; <a href={link} target="_blank">{link.replace(/^https?:\/\//i, "")}</a>
           </span>
         ))
       )}
       {demo && (
         <span>
-          <Presentation /> &nbsp; <a href={demo} target="_blank">{demo.replace(/^https?\:\/\//i, "")}</a>
+          <Presentation /> &nbsp; <a href={demo} target="_blank">{demo.replace(/^https?:\/\//i, "")}</a>
         </span>
       )}
     </div>
   );
 };
-
-// Markdown.propTypes = {
-//   raw: PropTypes.string.isRequired
-// }
 
 export default injectSheet(styles)(Metadata);

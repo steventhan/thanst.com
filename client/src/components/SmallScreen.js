@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import { findDOMNode } from "react-dom";
 import { Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import { Drawer } from "@material-ui/core";
 import injectSheet from "react-jss";
-import SplitPane from "react-split-pane";
-import { Scrollbars } from "react-custom-scrollbars";
 
 import { secondary } from "../theme";
 import { toggleDrawer } from "../actions/drawerActions";

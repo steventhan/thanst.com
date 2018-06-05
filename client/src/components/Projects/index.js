@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core";
-import { Scrollbars } from "react-custom-scrollbars";
 
 import SearchBox from "./SearchBox";
 import ProjectList from "./ProjectList";

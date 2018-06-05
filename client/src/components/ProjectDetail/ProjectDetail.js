@@ -43,7 +43,7 @@ class ProjectDetail extends Component {
   }
 
   render() {
-    const { fetching, error, project } = this.state;
+    const { fetching, project } = this.state;
     const { classes } = this.props;
     return (
       <div className={classes.root}>
