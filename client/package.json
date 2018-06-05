@@ -25,7 +25,8 @@
     "react-split-pane": "^0.1.77",
     "react-virtualized": "^9.19.0",
     "redux": "^4.0.0",
-    "redux-promise-middleware": "^5.1.1"
+    "redux-promise-middleware": "^5.1.1",
+    "showdown": "^1.8.6"
   },
   "scripts": {
     "start": "react-scripts start",

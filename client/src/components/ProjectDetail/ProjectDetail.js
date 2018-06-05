@@ -4,6 +4,8 @@ import axios from "axios";
 
 import { secondary } from "../../theme";
 import UnderlinedTitle from "../UnderlinedTitle";
+import Metadata from "./Metadata";
+import Markdown from "./Markdown";
 
 const styles = {
   root: {
@@ -13,9 +15,17 @@ const styles = {
     alignItems: "center",
     paddingTop: 60,
   },
+  section: {
+    display: "flex",
+    flexDirection: "column",
+    width: "93%",
+    maxWidth: 1000,
+  },
   progress: {
     color: secondary,
     justifySelf: "center"
+  },
+  detail: {
   },
 }
 
@@ -41,9 +51,10 @@ class ProjectDetail extends Component {
           <CircularProgress className={classes.progress} />
         )}
         {project && (
-          <div>
-            <UnderlinedTitle text={project.metadata.title} />
-            <div>{project.body}</div>
+          <div className={classes.section}>
+            <UnderlinedTitle style={{ paddingBottom: 20 }} text={project.metadata.title} />
+            <Metadata metadata={project.metadata} />
+            <Markdown raw={project.body} />
           </div>
         )}
       </div>
