@@ -11,13 +11,7 @@ import SmallScreen from "./components/SmallScreen";
 
 class App extends Component {
   state = {
-    screen: "large"
-  }
-
-  componentDidMount() {
-    this.setState({
-      screen: $(window).width() > 900 ? "large" : "small"
-    })
+    screen: $(window).width() > 900 ? "large" : "small"
   }
 
   render() {
