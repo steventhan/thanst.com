@@ -1,7 +1,7 @@
 import { createMuiTheme } from "@material-ui/core/styles";
 
-export const primary ="#4d5668";
-export const secondary = "#6480A8";
+export const secondary ="#4d5668";
+export const primary = "#6480A8";
 export const text = "#fafafa";
 
 export default createMuiTheme({
