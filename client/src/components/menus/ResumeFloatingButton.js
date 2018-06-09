@@ -38,7 +38,7 @@ class ResumeFloatingButton extends Component {
       <Button
         className={classes.root}
         onClick={this.handleClick}
-        variant="fab" color="secondary"
+        variant="fab" color="primary"
         title="resume"
       >
         <img width="65%" alt="resume" src={resumeIcon}/>

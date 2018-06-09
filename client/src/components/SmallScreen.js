@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Drawer } from "@material-ui/core";
 import injectSheet from "react-jss";
 
-import { secondary } from "../theme";
+import { primary } from "../theme";
 import { toggleDrawer } from "../actions/drawerActions";
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
@@ -15,7 +15,7 @@ import ProjectDetail from "./ProjectDetail";
 const styles = {
   paper: {
     maxWidth: "90%",
-    borderLeft: `5px solid ${secondary}`
+    borderLeft: `5px solid ${primary}`
   },
 }
 

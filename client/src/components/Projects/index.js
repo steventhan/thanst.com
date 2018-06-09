@@ -14,7 +14,7 @@ const styles = {
     paddingLeft: 10,
     paddingRight: 10,
   },
-}
+};
 
 
 class Projects extends Component {

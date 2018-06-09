@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink, Link, withRouter } from "react-router-dom";
-import { AppBar, Button, Toolbar } from "@material-ui/core";
+import { AppBar, Button, Toolbar, withStyles } from "@material-ui/core";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 
 
@@ -22,23 +22,29 @@ const styles = {
   },
   toolbar: {
     justifyContent: "space-between"
+  },
+  buttonLabel: {
+    marginLeft: -12
   }
 }
 
 class NavBar extends Component {
   render() {
     const url = this.props.location.pathname
+    console.log(this.props.classes.buttonLabel);
     return (
       <AppBar style={styles.appbar}>
         <Toolbar style={styles.toolbar}>
           <div>
             {/\/projects\/[a-z-]+/.test(url) && (
               <Button
-                color="secondary"
+                classes={{
+                  label: this.props.classes.buttonLabel
+                }}
+                color="primary"
                 size="small"
                 component={Link}
                 to="/projects"
-                variant="outlined"
               >
                 <KeyboardArrowLeft /> Back
               </Button>
@@ -53,7 +59,7 @@ class NavBar extends Component {
                 component={NavLink}
                 to={button.path}
                 size="small"
-                color="secondary"
+                color="primary"
                 variant="raised"
               >
                 {button.label}
@@ -66,4 +72,4 @@ class NavBar extends Component {
   }
 }
 
-export default withRouter(NavBar);
+export default withStyles(styles)(withRouter(NavBar));

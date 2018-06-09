@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { CircularProgress, withStyles } from "@material-ui/core";
 import axios from "axios";
 
-import { secondary } from "../../theme";
 import UnderlinedTitle from "../UnderlinedTitle";
 import Metadata from "./Metadata";
 import Markdown from "./Markdown";
@@ -22,12 +21,11 @@ const styles = {
     maxWidth: 1000,
   },
   progress: {
-    color: secondary,
-    justifySelf: "center"
+    justifySelf: "center",
   },
   detail: {
   },
-}
+};
 
 class ProjectDetail extends Component {
   state = {

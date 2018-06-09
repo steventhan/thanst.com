@@ -25,7 +25,7 @@ const styles = {
 const ContactOptions = ({ classes }) => (
   <div className={classes.root}>
     {options.map((option, i) => (
-      <Button title={option.label} size="small" color="secondary" key={i} href={option.url}>
+      <Button title={option.label} size="small" color="primary" key={i} href={option.url}>
         {option.icon}
         {option.label}
       </Button>)

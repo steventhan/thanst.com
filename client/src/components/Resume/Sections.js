@@ -144,7 +144,7 @@ export const Section = props => {
       flexBasis: props.left || 130,
       textTransform: "uppercase",
       fontWeight: "bold",
-      color: secondary,
+      color: primary,
       paddingBottom: lineSpacing,
     },
     right: {
@@ -286,7 +286,7 @@ export class Download extends Component {
         <Button
           onClick={event => event.stopPropagation()}
           variant="raised"
-          color="primary"
+          color="secondary"
           href={`https://s3-us-west-2.amazonaws.com/thanst.com/Steven-Than-resume.${this.state.format}`}
           target="_blank"
           download
@@ -296,11 +296,11 @@ export class Download extends Component {
         &nbsp;&nbsp;
         <Select
           onClick={event => event.stopPropagation()}
-          style={{ color: primary }}
+          style={{ color: secondary }}
           value={this.state.format}
           onChange={event => this.setState({ format: event.target.value})}
           IconComponent={() => (
-            <ArrowDropDownIcon style={{ top: "calc(50% - 12px)", right: 0, position: "absolute", color: primary }}/>
+            <ArrowDropDownIcon style={{ top: "calc(50% - 12px)", right: 0, position: "absolute", color: secondary }}/>
           )}
         >
           <MenuItem value="pdf">PDF</MenuItem>

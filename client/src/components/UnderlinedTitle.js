@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Typography } from "@material-ui/core";
 import injectSheet from "react-jss";
 
-import { secondary } from "../theme";
+import { primary } from "../theme";
 
 const styles = {
   root: {
@@ -12,7 +12,7 @@ const styles = {
     justifyContent: "center",
   },
   title: {
-    paddingBottom: 10,
+    padding: "10px 0px",
     display: "inline-block",
     position: "relative",
     "&:before": {
@@ -22,7 +22,7 @@ const styles = {
       height: 1,
       bottom: 0,
       left: "20%",
-      borderBottom: `2.5px solid ${secondary}`,
+      borderBottom: `2.5px solid ${primary}`,
     }
   }
 }

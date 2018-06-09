@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Avatar, CircularProgress, withStyles } from "@material-ui/core";
 
-import { secondary } from "../theme";
+import { primary } from "../theme";
 import ContactOptions from "./ContactOptions";
 import avatar from "../avatar.jpg";
 
@@ -15,7 +15,7 @@ const styles = {
     alignItems: "center",
   },
   progress: {
-    color: secondary
+    color: primary
   },
   wrapper: {
     display: "flex",
@@ -23,7 +23,7 @@ const styles = {
     alignItems: "center",
     width: 250,
     height: 250,
-    border: `5px solid ${secondary}`,
+    border: `5px solid ${primary}`,
     borderRadius: "50%",
   },
   avatar: {

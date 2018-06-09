@@ -8,7 +8,7 @@ import { Scrollbars } from "react-custom-scrollbars";
 
 import { resizePane } from "../actions/splitPaneActions";
 import { startWaiting, sendUpdateSignal } from "../actions/projectListActions";
-import { secondary } from "../theme";
+import { primary } from "../theme";
 import AboutMe from "./AboutMe";
 import Projects from "./Projects";
 import Resume from "./Resume";
@@ -19,7 +19,7 @@ const styles = {
   resizer: {
     cursor: "col-resize",
     width: 7,
-    backgroundColor: secondary,
+    backgroundColor: primary,
   },
 }
 

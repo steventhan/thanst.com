@@ -5,7 +5,6 @@ import { Card, CardHeader, CardContent, CardActions } from "@material-ui/core";
 import Masonry from "react-masonry-component";
 
 import ProjectTags from "../ProjectTags";
-import { secondary } from "../../../theme";
 
 const styles = {
   root: {},
@@ -13,7 +12,6 @@ const styles = {
     padding: "0.5%",
   },
   progress: {
-    color: secondary,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -63,7 +61,7 @@ class ProjectList extends Component {
         )}
         {projectListState.error && (
           <div className={classes.error}>
-            <Button onClick={this.handleTryAgain} variant="raised" color="secondary">Try again</Button>
+            <Button onClick={this.handleTryAgain} variant="raised" color="primary">Try again</Button>
           </div>
         )}
         {projects.length === 0 && !projectListState.fetching && !projectListState.error &&
