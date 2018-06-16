@@ -9,7 +9,7 @@ import { Scrollbars } from "react-custom-scrollbars";
 import { resizePane } from "../actions/splitPaneActions";
 import { startWaiting, sendUpdateSignal } from "../actions/projectListActions";
 import { primary } from "../theme";
-import AboutMe from "./AboutMe";
+import Home from "./Home";
 import Projects from "./Projects";
 import Resume from "./Resume";
 import ProjectDetail from "./ProjectDetail";
@@ -73,7 +73,7 @@ class LargeScreen extends Component {
       >
         <Scrollbars>
           <Switch>
-            <Route exact path="/" component={AboutMe}/>
+            <Route exact path="/" component={Home}/>
             <Route exact path="/projects" component={Projects}/>
             <Route exact path="/projects/:slug" component={ProjectDetail}/>
           </Switch>
