@@ -20,14 +20,20 @@ const styles = {
     justifyContent: "space-around",
     padding: 20
   },
+  buttonLabel: {
+    display: "flex",
+    alignItems: "center"
+  }
 }
 
 const ContactOptions = ({ classes }) => (
   <div className={classes.root}>
     {options.map((option, i) => (
       <Button title={option.label} size="small" color="primary" key={i} href={option.url}>
-        {option.icon}
-        {option.label}
+        <div className={classes.buttonLabel}>
+          {option.icon}
+          {option.label}
+        </div>
       </Button>)
     )}
   </div>
