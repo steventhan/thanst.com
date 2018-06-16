@@ -1,8 +1,5 @@
 const api = require("express").Router();
-const gql = require("graphql-tag").default;
 const { GraphQLClient } = require("graphql-request");
-
-// console.log(process.env.GITHUB_KEY);
 
 const github = new GraphQLClient('https://api.github.com/graphql', {
   headers: {
