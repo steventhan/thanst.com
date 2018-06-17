@@ -6,7 +6,7 @@ import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 
 const buttons = [
   {
-    label: "about me",
+    label: "home",
     path: "/"
   },
   {

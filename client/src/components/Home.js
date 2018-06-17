@@ -32,7 +32,7 @@ const styles = {
   }
 }
 
-class AboutMe extends Component {
+class Home extends Component {
   state = {
     loading: true
   }
@@ -62,4 +62,4 @@ class AboutMe extends Component {
   }
 }
 
-export default withStyles(styles)(AboutMe);
+export default withStyles(styles)(Home);
