@@ -30,8 +30,7 @@ const styles = {
 
 class NavBar extends Component {
   render() {
-    const url = this.props.location.pathname
-    console.log(this.props.classes.buttonLabel);
+    const url = this.props.location.pathname;
     return (
       <AppBar style={styles.appbar}>
         <Toolbar style={styles.toolbar}>
