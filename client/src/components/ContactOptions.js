@@ -22,7 +22,7 @@ const styles = {
   },
   buttonLabel: {
     display: "flex",
-    alignItems: "center"
+    alignItems: "flex-end"
   }
 }
 
