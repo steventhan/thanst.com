@@ -1,6 +1,6 @@
 import React from "react";
 import { withStyles, Button } from "@material-ui/core";
-import { EmailOutline, LinkedinBox, GithubCircle } from "mdi-material-ui";
+import { Email, LinkedinBox, GithubCircle } from "mdi-material-ui";
 
 
 const iconStyle = {
@@ -9,7 +9,7 @@ const iconStyle = {
 }
 
 const options = [
-  { label: "email", icon: <EmailOutline style={iconStyle} />,  url: "mailto:steven@thanst.com" },
+  { label: "email", icon: <Email style={iconStyle} />,  url: "mailto:steven@thanst.com" },
   { label: "github", icon: <GithubCircle style={iconStyle} />, url: "https://github.com/steventhan" },
   { label: "linkedin", icon: <LinkedinBox style={iconStyle} />, url: "https://linkedin.com/in/steven-than" },
 ];
