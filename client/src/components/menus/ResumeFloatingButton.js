@@ -40,7 +40,6 @@ class ResumeFloatingButton extends Component {
 
   render() {
     const { splitPane, drawer, classes } = this.props;
-    console.log(this.props);
     return (
       <Button
         className={classes.root}
