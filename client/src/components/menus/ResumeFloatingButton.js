@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import { withStyles, Button } from "@material-ui/core";
+import { Clear } from "@material-ui/icons"
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { togglePane } from "../../actions/splitPaneActions";
 import { toggleDrawer } from "../../actions/drawerActions";
 import { startWaiting } from "../../actions/projectListActions";
-import { withStyles, Button } from "@material-ui/core";
 
 import resumeIcon from "../../resume-icon.png";
 
@@ -21,6 +22,11 @@ const styles = {
   }
 }
 
+const mapStateToProps = store => ({
+  splitPane: store.splitPane,
+  drawer: store.drawer
+})
+
 class ResumeFloatingButton extends Component {
   handleClick = event => {
     const { screen } = this.props;
@@ -33,7 +39,8 @@ class ResumeFloatingButton extends Component {
   }
 
   render() {
-    const classes = this.props.classes;
+    const { splitPane, drawer, classes } = this.props;
+    console.log(this.props);
     return (
       <Button
         className={classes.root}
@@ -41,7 +48,11 @@ class ResumeFloatingButton extends Component {
         variant="fab" color="primary"
         title="resume"
       >
-        <img width="65%" alt="resume" src={resumeIcon}/>
+        {splitPane.open || drawer.open ? (
+          <Clear />
+        ) : (
+          <img width="65%" alt="resume" src={resumeIcon}/>
+        )}
       </Button>
     );
   }
@@ -51,4 +62,4 @@ ResumeFloatingButton.propTypes = {
   screen: PropTypes.oneOf([ "large", "small" ]).isRequired
 }
 
-export default connect(null)(withStyles(styles)(ResumeFloatingButton));
+export default connect(mapStateToProps)(withStyles(styles)(ResumeFloatingButton));
