@@ -1,6 +1,8 @@
 import React from "react";
 import { withStyles, Button } from "@material-ui/core";
-import { Email, LinkedinBox, GithubCircle } from "mdi-material-ui";
+import Email from "mdi-material-ui/Email";
+import LinkedinBox from "mdi-material-ui/LinkedinBox";
+import GithubCircle from "mdi-material-ui/GithubCircle";
 
 
 const iconStyle = {

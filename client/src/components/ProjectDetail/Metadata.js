@@ -1,6 +1,8 @@
 import React from "react";
 import injectSheet from "react-jss"
-import { CalendarRange, GithubCircle, Presentation } from "mdi-material-ui";
+import CalendarRange from "mdi-material-ui/CalendarRange";
+import GithubCircle from "mdi-material-ui/GithubCircle";
+import Presentation from "mdi-material-ui/Presentation";
 
 import { text } from "../../theme";
 
