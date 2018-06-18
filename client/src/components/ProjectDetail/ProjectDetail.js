@@ -21,7 +21,7 @@ const styles = {
     maxWidth: 1000,
   },
   progress: {
-    justifySelf: "center",
+    marginTop: 20
   },
   detail: {
   },
@@ -46,7 +46,9 @@ class ProjectDetail extends Component {
     return (
       <div className={classes.root}>
         {fetching && (
-          <CircularProgress className={classes.progress} />
+          <div className={classes.progress}>
+            <CircularProgress />
+          </div>
         )}
         {project && (
           <div className={classes.section}>
