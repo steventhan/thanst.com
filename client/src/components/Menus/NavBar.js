@@ -13,7 +13,7 @@ const buttons = [
     label: "projects",
     path: "/projects"
   },
-]
+];
 
 const styles = {
   appbar: {
