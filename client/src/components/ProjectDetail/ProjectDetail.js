@@ -21,7 +21,7 @@ const styles = {
     maxWidth: 1000,
   },
   progress: {
-    justifySelf: "center",
+    marginTop: 20,
   },
   detail: {
   },
