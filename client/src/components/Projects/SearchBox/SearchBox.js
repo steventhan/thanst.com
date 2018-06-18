@@ -20,6 +20,7 @@ const SearchBox = ({ text, classes, onChange, onClearButtonClick }) => (
       className={classes.textBox}
       label="Search"
       helperText={"Search phrases can be comma-separated, and are regex enabled. For example: machine learning, \\bReactJS\\b, mongo"}
+      FormHelperTextProps={{ style: { lineHeight: 1.25 } }}
       value={text}
       onChange={onChange}
       fullWidth
