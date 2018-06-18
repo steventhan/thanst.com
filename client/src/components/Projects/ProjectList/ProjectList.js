@@ -9,7 +9,7 @@ import ProjectTags from "../ProjectTags";
 const styles = {
   root: {},
   project: {
-    padding: "0.5%",
+    padding: 8,
   },
   progress: {
     display: "flex",
