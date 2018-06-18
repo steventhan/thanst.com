@@ -1,6 +1,6 @@
 import React from "react";
 import { withStyles,  InputAdornment, IconButton, TextField } from "@material-ui/core";
-import { Clear } from "@material-ui/icons"
+import Clear from "@material-ui/icons/Clear";
 
 const styles = {
   root: {

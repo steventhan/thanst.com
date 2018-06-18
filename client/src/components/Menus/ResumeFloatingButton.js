@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withStyles, Button } from "@material-ui/core";
-import { Clear } from "@material-ui/icons"
+import Clear from "@material-ui/icons/Clear";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { togglePane } from "../../actions/splitPaneActions";
