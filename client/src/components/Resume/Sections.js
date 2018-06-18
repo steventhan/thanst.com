@@ -8,7 +8,7 @@ import Keyword from "./Keyword";
 import { primary, secondary } from "../../theme";
 
 const resume = {
-  intro: "Hi, my name is Steven Than. I'm a grad student at Northeastern University working toward my Master's degree in Computer Science with "
+  intro: "Hello there, my name is Steven Than. I'm a grad student at Northeastern University working toward my Master's degree in Computer Science with "
       + " specializations in Game Design and Artificial Intelligence.\nPrior grad school, I was a fullstack developer, "
       + "and had worked on various types of projects ranging from customer-facing interfaces to internal tools to "
       + "hardware/software integration.\nI'm currently looking for co-op for latter half of 2018 (August to December).",
@@ -24,7 +24,7 @@ const resume = {
       { displayText: "Lua", searchText: "^Lua$" },
       "PHP",
       { displayText: "Python", searchText: "^Python$" },
-      { displayText: "Racket/Scheme", searchText: "^(Racket|Scheme)$" },
+      "Racket/Scheme",
       { displayText: "Swift", searchText: "^Swift$" },
     ],
     systems: ["Windows XP/7/8/10", "macOS", "Linux (Ubuntu, CentOS)"],
@@ -43,6 +43,7 @@ const resume = {
       { displayText: "Django", searchText: "^Django$" },
       { displayText: "ExpressJS", searchText: "^ExpressJS$" },
       { displayText: "Flask", searchText: "^Flask$" },
+      { displayText: "GraphQL", searchText: "^GraphQL" },
       { displayText: "Japronto", searchText: "^Japronto$" },
       { displayText: "jQuery", searchText: "^jQuery$" },
       { displayText: "Pyramid", searchText: "^Pyramid$" },
@@ -59,8 +60,8 @@ const resume = {
       "RackUnit"
     ],
     "cloud services": [
-      { displayText: "AWS (EC2, S3)", searchText: "^(AWS|EC2|S3)$" },
-      { displayText: "Google cloud (Compute engine, Firebase)", searchText: "^(Compute engine|Firebase)$" },
+      { displayText: "AWS (EC2, RDS, S3)", searchText: "^(AWS|EC2|RDS|S3)$" },
+      "Google cloud (Compute engine, Firebase)",
       { displayText: "Heroku", searchText: "^Heroku$" },
     ],
   },
@@ -84,7 +85,7 @@ const resume = {
       to: "Mar 2015",
       graduation: "Mar 2015",
       college: "Albers School of Business and Economics",
-      degree: "Bachelor of Arts in Finance and Information Systems",
+      degree: "Bachelor of Arts in Finance and Information Systems (double major)",
       gpa: "3.7/4.0",
       courses: ["Applied Statistics", "Object Oriented Modeling", "Web Technologies", "Data Mining", "Data Management"]
     }
