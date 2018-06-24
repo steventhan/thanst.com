@@ -10,7 +10,11 @@ const styles = {
   root: {
     lineHeight: 1.75,
     "& a": {
+      textDecoration: "none",
       color: text,
+      "&:hover": {
+        textDecoration: "underline"
+      }
     },
     "& span": {
       display: "flex",

@@ -22,6 +22,12 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     paddingBottom: 10
+  },
+  link: {
+    textDecoration: "none",
+    "&:hover, &:focus, &:active, &:visited": {
+      textDecoration: "none"
+    }
   }
 };
 
@@ -70,7 +76,7 @@ class ProjectList extends Component {
           {projects.map(project => (
             <div style={{ width: this.props.projectWidth }} className={classes.project} key={project.slug}>
               <Card>
-                <Link to={`${location.pathname}/${project.slug}`}>
+                <Link className={classes.link} to={`${location.pathname}/${project.slug}`}>
                   <CardHeader
                     title={project.metadata.title}
                     subheader={`${project.metadata.start} - ${project.metadata.end}`}
