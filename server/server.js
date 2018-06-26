@@ -1,11 +1,13 @@
 const express = require("express");
-const app = express();
 const path = require("path");
+const compression = require("compression");
+
 const api = require("./api");
 
+const app = express();
 const PORT = process.env.PORT || 4000;
+app.use(compression());
 app.use(express.static("./build"));
-
 app.use("/api", api);
 
 app.get("*", (req, res) => {
