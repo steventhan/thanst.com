@@ -60,7 +60,14 @@ const fetchAllProjects = () => {
 };
 
 api.get("/projects", (req, res) => {
-  fetchAllProjects().then(projects => res.send(projects)).catch(err => console.log(err) || res.sendStatus(500));
+  fetchAllProjects()
+    .then(projects => {
+      projects.sort((a, b) => {
+        return new Date(b.metadata.start) - new Date(a.metadata.start);
+      });
+      res.send(projects);
+    })
+    .catch(err => console.log(err) || res.sendStatus(500));
 });
 
 api.get("/projects/:slug", (req, res) => {
