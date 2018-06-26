@@ -41,5 +41,5 @@
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer build/static/js/main.*"
   },
-  "proxy": "http://localhost:4000",
+  "proxy": "http://localhost:4000"
 }
