@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { Button, CircularProgress, Typography, withStyles } from "@material-ui/core";
+import { Button, CircularProgress, Typography } from "@material-ui/core";
 import { Card, CardHeader, CardContent, CardActions } from "@material-ui/core";
+import injectSheet from "react-jss";
 import Masonry from "react-masonry-component";
 
 import ProjectTags from "../ProjectTags";
@@ -10,6 +11,12 @@ const styles = {
   root: {},
   project: {
     padding: 8,
+  },
+  card: {
+    "&:hover": {
+      transition: "transform 0.2s",
+      transform: "scale(1.03)"
+    }
   },
   progress: {
     display: "flex",
@@ -22,6 +29,12 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     paddingBottom: 10
+  },
+  link: {
+    textDecoration: "none",
+    "&:hover, &:focus, &:active, &:visited": {
+      textDecoration: "none"
+    }
   }
 };
 
@@ -69,8 +82,8 @@ class ProjectList extends Component {
         <Masonry options={options} >
           {projects.map(project => (
             <div style={{ width: this.props.projectWidth }} className={classes.project} key={project.slug}>
-              <Card>
-                <Link to={`${location.pathname}/${project.slug}`}>
+              <Card className={classes.card}>
+                <Link className={classes.link} to={`${location.pathname}/${project.slug}`}>
                   <CardHeader
                     title={project.metadata.title}
                     subheader={`${project.metadata.start} - ${project.metadata.end}`}
@@ -94,4 +107,4 @@ class ProjectList extends Component {
   }
 }
 
-export default withRouter(withStyles(styles)(ProjectList));
+export default withRouter(injectSheet(styles)(ProjectList));

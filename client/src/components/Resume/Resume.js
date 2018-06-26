@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core";
 
-import { Section, Instruction, Download, Intro, Skills, Education, Experience } from "./Sections";
+import { Section, Instruction, Download, Intro, Skills, Education, Experience, Interest } from "./Sections";
 
 const styles = {
   root: {
-    paddingBottom: 30,
+    paddingBottom: 60,
     backgroundColor: "#fafafa",
     color: "#000",
     transition: "width 0.3s linear",
@@ -37,6 +37,9 @@ class Resume extends Component {
         </Section>
         <Section label="Experience">
           <Experience />
+        </Section>
+        <Section label="Interest">
+          <Interest />
         </Section>
       </div>
     );

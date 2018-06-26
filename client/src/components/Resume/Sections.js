@@ -19,8 +19,8 @@ const resume = {
     languages: [
       "C",
       "C#",
+      { displayText: "Java", searchText: "^Java$" },
       { displayText: "JavaScript", searchText: "^JavaScript$" },
-      "Java",
       { displayText: "Lua", searchText: "^Lua$" },
       "PHP",
       { displayText: "Python", searchText: "^Python$" },
@@ -129,7 +129,10 @@ const resume = {
         "Managed computer part orders and tracked repair tickets",
       ],
     }
-  }
+  },
+  interest: [
+    "Dogs", "Guinea Pigs", "Traveling", "Weight Lifting"
+  ]
 }
 
 const lineSpacing = 5;
@@ -160,8 +163,8 @@ export const Section = props => {
       <div style={styles.left}>{props.label}</div>
       <div style={styles.right}>{props.children}</div>
     </div>
-  )
-}
+  );
+};
 
 export const Intro = props => {
   return (
@@ -171,7 +174,7 @@ export const Intro = props => {
       ))}
     </Fragment>
   );
-}
+};
 
 export const Skills = props => {
   const skillsOrder = resume.skills.order;
@@ -192,7 +195,7 @@ export const Skills = props => {
       })}
     </Fragment>
   );
-}
+};
 
 export const Education = props => {
   const educationOrder = resume.education.order;
@@ -229,7 +232,7 @@ export const Education = props => {
       })}
     </Fragment>
   );
-}
+};
 
 export const Experience = props => {
   const expOrder = resume.experience.order;
@@ -264,7 +267,15 @@ export const Experience = props => {
       })}
     </Fragment>
   );
-}
+};
+
+export const Interest = props => {
+  return (
+    <div>
+      {resume.interest.join(", ")}
+    </div>
+  );
+};
 
 export const Instruction = props => {
   return (
@@ -274,7 +285,7 @@ export const Instruction = props => {
       <i><small style={{ fontWeight: "lighter" }}>Click on underlined keywords to see relevant projects</small></i>
     </div>
   );
-}
+};
 
 export class Download extends Component {
   state = {
