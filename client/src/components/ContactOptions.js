@@ -31,7 +31,7 @@ const styles = {
 const ContactOptions = ({ classes }) => (
   <div className={classes.root}>
     {options.map((option, i) => (
-      <Button title={option.label} size="small" color="primary" key={i} href={option.url}>
+      <Button target="_blank" title={option.label} size="small" color="primary" key={i} href={option.url}>
         <div className={classes.buttonLabel}>
           {option.icon}
           {option.label}
