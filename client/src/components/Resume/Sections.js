@@ -129,7 +129,10 @@ const resume = {
         "Managed computer part orders and tracked repair tickets",
       ],
     }
-  }
+  },
+  interest: [
+    "Dogs", "Guinea Pigs", "Traveling", "Weight Lifting"
+  ]
 }
 
 const lineSpacing = 5;
@@ -160,7 +163,7 @@ export const Section = props => {
       <div style={styles.left}>{props.label}</div>
       <div style={styles.right}>{props.children}</div>
     </div>
-  )
+  );
 };
 
 export const Intro = props => {
@@ -263,6 +266,14 @@ export const Experience = props => {
         );
       })}
     </Fragment>
+  );
+};
+
+export const Interest = props => {
+  return (
+    <div>
+      {resume.interest.join(", ")}
+    </div>
   );
 };
 
