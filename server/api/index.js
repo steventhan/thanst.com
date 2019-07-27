@@ -5,7 +5,7 @@ const github = new GraphQLClient('https://api.github.com/graphql', {
   headers: {
     Authorization: `Bearer ${process.env.GITHUB_KEY}`,
   },
-})
+});
 
 
 const fetchAllProjects = () => {
