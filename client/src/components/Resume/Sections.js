@@ -11,10 +11,10 @@ const resume = {
   intro: "Hello there, my name is Steven Than. I'm a grad student at Northeastern University working toward my Master's degree in Computer Science with "
       + " specializations in Game Design and Artificial Intelligence.\nPrior grad school, I was a fullstack developer, "
       + "and had worked on various types of projects ranging from customer-facing interfaces to internal tools to "
-      + "hardware/software integration.\nI'm currently looking for co-op for latter half of 2018 (August to December).",
+      + "hardware/software integration.\nI'm currently in search for full-time software development opportunities.",
   skills: {
     order: [
-      "languages", "systems", "software", "databases", "frameworks/libraries", "testing", "cloud services"
+      "languages", "systems", "databases", "frameworks/libraries", "testing", "dev ops"
     ],
     languages: [
       "C",
@@ -26,10 +26,12 @@ const resume = {
       { displayText: "Python", searchText: "^Python$" },
       "Racket/Scheme",
       { displayText: "Swift", searchText: "^Swift$" },
+      "Typescript",
     ],
-    systems: ["Windows XP/7/8/10", "macOS", "Linux (Ubuntu, CentOS)"],
-    software: ["Atom", "Bash", "Git", "JetBrains products", "Photoshop", "Vim", "Sublime", "ZSH"],
+    systems: ["Windows XP/7/8/10", "macOS", "Linux"],
     databases: [
+      "Cassandra",
+      { displayText: "ElasticSearch", searchText: "^ElasticSearch$" },
       "Microsoft SQL Server",
       { displayText: "MySQL", searchText: "^MySQL$" },
       "SQLite",
@@ -52,6 +54,7 @@ const resume = {
       { displayText: "Redux", searchText: "^Redux$" },
     ],
     testing: [
+      "Jasmine",
       { displayText: "JUnit", searchText: "^JUnit$" },
       { displayText: "pytest", searchText: "^pytest$" },
       { displayText: "unittest", searchText: "^unittest$" },
@@ -59,10 +62,17 @@ const resume = {
       { displayText: "chai", searchText: "^chai$" },
       "RackUnit"
     ],
-    "cloud services": [
-      { displayText: "AWS (EC2, RDS, S3)", searchText: "^(AWS|EC2|RDS|S3)$" },
+    "dev ops": [
+      "Ansible",
+      { displayText: "AWS (EC2, RDS, S3)", searchText: "^(AWS|EC2|RDS|S3|SQS)$" },
+      "Bamboo",
+      { displayText: "Docker", searchText: "^Docker$" },
+      "Jenkins",
       "Google cloud (Compute engine, Firebase)",
+      "Mesos",
       { displayText: "Heroku", searchText: "^Heroku$" },
+      "TravisCI",
+      "Terraform",
     ],
   },
   education: {
@@ -73,10 +83,10 @@ const resume = {
       from: "Jan 2017",
       to: "Present",
       graduation: "Dec 2019",
-      college: "College of Computer and Information Science",
+      college: "Khoury College of Computer Sciences",
       degree: "Candidate for a Master of Science in Computer Science",
-      gpa: "3.96/4.00",
-      courses: ["Object Oriented Design", "Algorithms", "Computer Systems", "Game AI", "Human-Computer Interaction"]
+      gpa: "3.97/4.00",
+      courses: ["Object Oriented Design", "Algorithms", "Computer Systems", "Game AI", "Human-Computer Interaction", "Computer Networks", "Advanced Software Development"]
     },
     su: {
       name: "Seattle University",
@@ -91,11 +101,35 @@ const resume = {
     }
   },
   experience: {
-    order: ["ta", "dev", "tech"],
-    ta: {
+    order: ["cap1", "trip", "neu", "hng", "su"],
+    cap1: {
+      employer: "Capital One",
+      location: "Richmond, VA",
+      title: "Software engineer intern",
+      from: "Jun 2019",
+      to: "Aug 2019",
+      responsibilities: [
+        "Part of wikibuy.com integration team. Helped migrate 10% of Wikibuy's microservices to Capital One existing infrastructure",
+        "Onboarded wikibuy to Capital One's enterprise system logging platform with FluentD, AWS Kinesis stream and ELK stack",
+        "Awarded 2nd place (out of 100+ teams) of the annual Capital One intern hackathon"
+      ],
+    },
+    trip: {
+      employer: "TripAdvisor",
+      location: "Boston, MA",
+      title: "Software engineer co-op",
+      from: "Jan 2019",
+      to: "Jun 2019",
+      responsibilities: [
+        "Member of the experiences (attractions) demand team that provide 100,000+ tours and activities for millions of customers using Java, TypeScript, SCSS, MySQL and Solr",
+        "Improved user experience with server-side caching and static asset delivery optimization; increased Google PageSpeed score by 20+ points for both desktop and mobile sites",
+        "Responsible for build tools migrations (Webpack 3 → 4, Maven → Gradle) that sped up project compile time by 300%"
+      ],
+    },
+    neu: {
       employer: "Northeastern University",
       location: "Boston, MA",
-      title: "CCIS grad teaching assistant",
+      title: "Grad teaching assistant",
       from: "Sep 2017",
       to: "Present",
       responsibilities: [
@@ -104,7 +138,7 @@ const resume = {
         "Handle weekly assignment/exam grading and recitation sessions"
       ],
     },
-    dev: {
+    hng: {
       employer: "HNG Group LLC",
       location: "Seattle, WA",
       title: "Software developer",
@@ -117,7 +151,7 @@ const resume = {
         "Set up online marketing campaigns with Yelp and Google AdWords",
       ],
     },
-    tech: {
+    su: {
       employer: "Seattle University",
       location: "Seattle, WA",
       title: "Computer technician",
