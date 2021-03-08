@@ -1,5 +1,5 @@
 import { NowRequest, NowResponse } from "@vercel/node";
-import { fetchAllProjects } from "./";
+import { fetchAllProjects } from ".";
 
 export default async (req: NowRequest, res: NowResponse) => {
   const projects = await fetchAllProjects();
