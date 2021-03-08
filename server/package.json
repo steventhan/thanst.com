@@ -2,25 +2,13 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "license": "MIT",
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "dependencies": {
-    "apollo-boost": "^0.1.7",
-    "axios": "^0.21.1",
-    "compression": "^1.7.2",
-    "express": "^4.16.3",
-    "forever": "^0.15.3",
-    "graphql": "^0.13.2",
-    "graphql-request": "^1.6.0",
-    "graphql-tag": "^2.9.2",
-    "node-fetch": "^2.1.2"
-  },
-  "devDependencies": {
-    "nodemon": "^1.17.5"
+    "@vercel/node": "^1.9.0",
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
+    "vercel": "^21.3.2"
   }
 }
