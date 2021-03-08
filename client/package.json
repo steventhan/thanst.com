@@ -27,7 +27,7 @@
     "react-virtualized": "^9.19.0",
     "redux": "^4.0.0",
     "redux-promise-middleware": "^5.1.1",
-    "showdown": "^1.8.6",
+    "showdown": "^1.9.1",
     "source-map-explorer": "^1.5.0",
     "webpack-bundle-analyzer": "^3.3.2"
   },
